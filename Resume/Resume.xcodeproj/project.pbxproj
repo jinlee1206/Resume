@@ -12,6 +12,7 @@
 		DB02711B20B80D400000F99A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB02711920B80D400000F99A /* Main.storyboard */; };
 		DB02711D20B80D410000F99A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB02711C20B80D410000F99A /* Assets.xcassets */; };
 		DB02712020B80D410000F99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB02711E20B80D410000F99A /* LaunchScreen.storyboard */; };
+		DB02712D20B81D8D0000F99A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02712C20B81D8D0000F99A /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DB02711C20B80D410000F99A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB02711F20B80D410000F99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB02712120B80D410000F99A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB02712C20B81D8D0000F99A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,54 @@
 			isa = PBXGroup;
 			children = (
 				DB02711520B80D400000F99A /* AppDelegate.swift */,
-				DB02711720B80D400000F99A /* ViewController.swift */,
+				DB02712B20B80DD20000F99A /* Firebase */,
+				DB02712A20B80DC50000F99A /* Helper */,
+				DB02712920B80DC00000F99A /* Extension */,
+				DB02712720B80DAF0000F99A /* Controller */,
+				DB02712820B80DB50000F99A /* View */,
 				DB02711920B80D400000F99A /* Main.storyboard */,
 				DB02711C20B80D410000F99A /* Assets.xcassets */,
 				DB02711E20B80D410000F99A /* LaunchScreen.storyboard */,
 				DB02712120B80D410000F99A /* Info.plist */,
 			);
 			path = Resume;
+			sourceTree = "<group>";
+		};
+		DB02712720B80DAF0000F99A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB02711720B80D400000F99A /* ViewController.swift */,
+				DB02712C20B81D8D0000F99A /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DB02712820B80DB50000F99A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB02712920B80DC00000F99A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DB02712A20B80DC50000F99A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		DB02712B20B80DD20000F99A /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB02712D20B81D8D0000F99A /* ProfileViewController.swift in Sources */,
 				DB02711820B80D400000F99A /* ViewController.swift in Sources */,
 				DB02711620B80D400000F99A /* AppDelegate.swift in Sources */,
 			);
@@ -283,6 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64NX5H9B23;
 				INFOPLIST_FILE = Resume/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,7 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hexcon.Resume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,6 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64NX5H9B23;
 				INFOPLIST_FILE = Resume/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hexcon.Resume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
