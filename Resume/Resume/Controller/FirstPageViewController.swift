@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FirstPageViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var mainLabel: UILabel!
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
 }
 
 //MARK:- Life Cycle
-extension ViewController {
+extension FirstPageViewController {
     
 
     
@@ -51,7 +51,7 @@ extension ViewController {
 
 
 //MARK:- Setup SubViews
-extension ViewController {
+extension FirstPageViewController {
     
     fileprivate func setupLabels() {
         
@@ -65,7 +65,7 @@ extension ViewController {
 }
 
 //MARK:- Actions
-extension ViewController {
+extension FirstPageViewController {
     
     @objc fileprivate func tapView() {
         
@@ -93,13 +93,13 @@ extension ViewController {
                     
                 }) { (_) in
                     
-                    let profileVC = ProfileViewController()
-                    
-                    self.present(profileVC, animated: true, completion: {
-                        
-                        
-                        
-                    })
+//                    let profileVC = ProfileViewController()
+//
+//                    self.present(profileVC, animated: true, completion: {
+//
+//
+//
+//                    })
                     
                 }
                 
