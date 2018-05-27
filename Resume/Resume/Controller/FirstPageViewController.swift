@@ -8,15 +8,23 @@
 
 import UIKit
 
-class FirstPageViewController: UIViewController {
+protocol MemoryManager : class {
+    
+    func removeViewController()
+}
 
+class FirstPageViewController: UIViewController {
+    
+    
+    weak var delegate : MemoryManager?
+    
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var subLabel: UILabel!
     
     
     deinit {
-        print("deinit : ViewController")
+        print("deinit : FirstPageViewController")
     }
     
 
@@ -64,6 +72,7 @@ extension FirstPageViewController {
     
 }
 
+
 //MARK:- Actions
 extension FirstPageViewController {
     
@@ -93,9 +102,13 @@ extension FirstPageViewController {
                     
                 }) { (_) in
                     
+                    
+                    self.delegate?.removeViewController()
 //                    let profileVC = ProfileViewController()
-//
 //                    self.present(profileVC, animated: true, completion: {
+//
+//
+//
 //
 //
 //

@@ -21,6 +21,15 @@ class IntroViewController : UIViewController {
     lazy var pages = [FirstPageViewController.fromStoryboard(),
                       SecondPageViewController.fromStoryboard()
                      ]
+    
+    
+
+    
+    
+    deinit {
+        
+        print("deinit : IntroViewController")
+    }
 
     
 }
@@ -36,6 +45,18 @@ extension IntroViewController {
         setupPageViewController()
         
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        
+
+        
+        
+        
+        print("viewDidDisappear")
+    }
+    
+
     
 }
 
@@ -60,8 +81,15 @@ extension IntroViewController : UIPageViewControllerDelegate , UIPageViewControl
         self.pageContainer.dataSource = self
         
         
-        if let firstVC = pages.first {
+        
+        
+        if let firstVC = pages.first as? FirstPageViewController {
+            
+            firstVC.delegate = self
+            
+            
             self.pageContainer.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+            
         }
         
         view.addSubview(pageContainer.view)
@@ -80,6 +108,8 @@ extension IntroViewController : UIPageViewControllerDelegate , UIPageViewControl
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if completed {
+            
+            
             currentIndex = pendingIndex
             if let index = currentIndex {
                 pageControl.currentPage = index
@@ -99,8 +129,6 @@ extension IntroViewController : UIPageViewControllerDelegate , UIPageViewControl
             
         }
         
-        print(viewControllerIndex)
-        
         return pages[viewControllerIndex-1]
     }
     
@@ -112,20 +140,32 @@ extension IntroViewController : UIPageViewControllerDelegate , UIPageViewControl
             return nil
         }
         
-        print(viewControllerIndex)
-        
-        
         return pages[viewControllerIndex+1]
     }
     
-    
-    
-    
-
-    
-    
+ 
 }
+//MARK:- MemoryManager Protocol
+extension IntroViewController : MemoryManager {
+    
+    func removeViewController() {
+        
+        guard let window = UIApplication.shared.keyWindow else { return }
+        guard let rootViewController = window.rootViewController else { return }
+        
+        let profileNVC = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileNVC")
+//        let profileVC = ProfileViewController.fromStoryboard()
+        profileNVC.view.frame = rootViewController.view.frame
+        profileNVC.view.layoutIfNeeded()
+        
+        UIView.transition(with: window, duration: 1, options: .transitionCurlUp, animations: {
+            window.rootViewController = profileNVC
+        }, completion: { completed in
+            // maybe do something here
+        })
+   
+    }
 
-extension IntroViewController {
+    
     
 }

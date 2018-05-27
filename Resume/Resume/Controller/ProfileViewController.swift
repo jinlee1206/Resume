@@ -12,7 +12,16 @@ import UIKit
 
 class ProfileViewController : UIViewController {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var jobLabel: UILabel!
+    
+    @IBOutlet weak var introduceLabel: UILabel!
+    
+    @IBOutlet weak var collectionView: UICollectionView!
 }
+
+
 
 
 
@@ -21,9 +30,13 @@ extension ProfileViewController {
     
     override func viewDidLoad() {
         
+
+        setupViews()
+//        setupCollectionView()
         
-        self.view.backgroundColor = .blue
     }
+    
+
     
 }
 
@@ -31,11 +44,39 @@ extension ProfileViewController {
 //MARK:- Setup SubViews
 extension ProfileViewController {
     
-}
-
-extension ProfileViewController {
+    fileprivate func setupViews() {
+        
+        nameLabel.font = UIFont(name:"Futura", size: 18)
+        
+    }
     
 }
+
+
+////MARK:- Setup CollectionView
+//extension ProfileViewController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+//
+////    fileprivate func setupCollectionView() {
+////
+////        self.collectionView.delegate = self
+////        self.collectionView.dataSource = self
+////
+////    }
+////
+////    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+////
+////        return 4
+////
+////    }
+////
+////
+////    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+////
+//////        let cell = self.collectionView.de
+////
+////    }
+//
+//}
 
 extension ProfileViewController {
     

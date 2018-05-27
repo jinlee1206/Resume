@@ -11,6 +11,12 @@ import UIKit
 
 class SecondPageViewController : UIViewController {
     
+    deinit {
+        
+        print("deinit : SecondPageViewController")
+        
+    }
+    
 }
 
 
@@ -22,6 +28,9 @@ extension SecondPageViewController {
         
         self.view.backgroundColor = .white
     }
+    
+    
+
     
 
     
