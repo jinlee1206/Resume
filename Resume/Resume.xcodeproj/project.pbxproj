@@ -18,6 +18,8 @@
 		DB02713320B839900000F99A /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02713220B839900000F99A /* UIStoryboard.swift */; };
 		DB02713520B83A060000F99A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02713420B83A060000F99A /* Common.swift */; };
 		DB02713720B954BD0000F99A /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02713620B954BD0000F99A /* IntroViewController.swift */; };
+		DB02713B20BA41E00000F99A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02713A20BA41E00000F99A /* UITableView.swift */; };
+		DB02713D20BA41F00000F99A /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02713C20BA41F00000F99A /* UICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		DB02713220B839900000F99A /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		DB02713420B83A060000F99A /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		DB02713620B954BD0000F99A /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		DB02713A20BA41E00000F99A /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		DB02713C20BA41F00000F99A /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 			children = (
 				DB02713420B83A060000F99A /* Common.swift */,
 				DB02713220B839900000F99A /* UIStoryboard.swift */,
+				DB02713A20BA41E00000F99A /* UITableView.swift */,
+				DB02713C20BA41F00000F99A /* UICollectionView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -193,11 +199,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB02713D20BA41F00000F99A /* UICollectionView.swift in Sources */,
 				DB02713320B839900000F99A /* UIStoryboard.swift in Sources */,
 				DB02712D20B81D8D0000F99A /* ProfileViewController.swift in Sources */,
 				DB02711820B80D400000F99A /* FirstPageViewController.swift in Sources */,
 				DB02711620B80D400000F99A /* AppDelegate.swift in Sources */,
 				DB02712F20B837CD0000F99A /* IntroPageViewController.swift in Sources */,
+				DB02713B20BA41E00000F99A /* UITableView.swift in Sources */,
 				DB02713120B838E10000F99A /* SecondPageViewController.swift in Sources */,
 				DB02713520B83A060000F99A /* Common.swift in Sources */,
 				DB02713720B954BD0000F99A /* IntroViewController.swift in Sources */,
